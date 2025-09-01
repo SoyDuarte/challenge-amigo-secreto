@@ -20,24 +20,22 @@ let amigos = [];
       
       amigos.push(nombre);
       mostrarAmigos();
-
       input.value = "";
       input.focus();
 
     }
 
     function mostrarAmigos() {
-      let ul = document.getElementById("listaAmigos");
-      listaAmigos.innerHTML = "";
+      let lista = document.getElementById("listaAmigos")
+      lista.innerHTML = "";
+
       for (let i = 0; i < amigos.length; i++) {
-        li = document.createElement("lista");
-        li.textContent = amigo[i];
-        ul.appendChild(li);
+        let li = document.createElement("li");
+        li.textContent = amigos[i];
+        lista.appendChild(li);
       }
       console.log("Lista de amigos", amigos);
     }
-
-    
 
     function sortearAmigo() {
         if (amigos.length === 0) {
